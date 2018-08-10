@@ -60,7 +60,7 @@ header {
     .home_service .title h2:before {
       content: "";
       display: block;
-      background: gray;
+      background: rgba(0, 0, 0, 0.3);
       width: 5rem;
       height: 4px;
       position: absolute;
@@ -85,7 +85,7 @@ header {
     .home_team .title h2:before {
       content: "";
       display: block;
-      background: gray;
+      background: rgba(0, 0, 0, 0.3);
       width: 5rem;
       height: 4px;
       position: absolute;
@@ -132,7 +132,7 @@ header {
     .home_skill .title h2:before {
       content: "";
       display: block;
-      background: gray;
+      background: rgba(0, 0, 0, 0.3);
       width: 5rem;
       height: 4px;
       position: absolute;
@@ -172,7 +172,7 @@ header {
     .home_portfolio .title h2:before {
       content: "";
       display: block;
-      background: gray;
+      background: rgba(0, 0, 0, 0.3);
       width: 5rem;
       height: 4px;
       position: absolute;
@@ -224,7 +224,7 @@ header {
     .home_about .title h2:before {
       content: "";
       display: block;
-      background: gray;
+      background: rgba(0, 0, 0, 0.3);
       width: 5rem;
       height: 4px;
       position: absolute;
@@ -267,7 +267,7 @@ header {
     .home_contact .title h2:before {
       content: "";
       display: block;
-      background: gray;
+      background: rgba(0, 0, 0, 0.3);
       width: 5rem;
       height: 4px;
       position: absolute;
