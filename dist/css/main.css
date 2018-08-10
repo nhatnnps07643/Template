@@ -139,19 +139,21 @@ header {
       left: 50%;
       bottom: -.7rem;
       transform: translateX(-50%); }
-  .home_skill div[id^="circle"] {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .home_skill div[id^="circle"] canvas {
-      transform: rotate(90deg); }
-    .home_skill div[id^="circle"] p {
-      position: absolute;
-      font-size: 2.4rem; }
-  .home_skill h3 {
-    padding: 1rem 0rem;
-    font-weight: 600; }
+  .home_skill .circle_progress {
+    margin: 1.5rem 0rem; }
+    .home_skill .circle_progress div[id^="circle"] {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .home_skill .circle_progress div[id^="circle"] canvas {
+        transform: rotate(90deg); }
+      .home_skill .circle_progress div[id^="circle"] p {
+        position: absolute;
+        font-size: 2.4rem; }
+    .home_skill .circle_progress h3 {
+      padding: 1rem 0rem;
+      font-weight: 600; }
 
 .home_portfolio {
   background: #ffdd99;
