@@ -1,0 +1,193 @@
+@import ../_core/_all
+
+header 
+	width: 100%
+	background: $mautim
+	.menu 
+		ul 
+			list-style: none 
+			display: flex
+			justify-content: space-around
+			a 
+				text-decoration: none 
+				color: #fff 
+			li 
+				padding: 0.2rem 0.5rem
+				border-radius: .3rem
+				&:hover 
+					background: #643a79
+.home_banner
+	padding: 5rem
+	color: #fff
+	font-weight: 800
+	+section_home($mautim, #fff)
+	a 
+		+btn-to(#fff,$maucam, 3rem)
+
+.home_service
+	+section_home($mauxanh, #fff)
+	.box_icon
+		padding: 0rem 3rem
+	.title 
+		+section_title()
+
+.home_team
+	+section_home(#fff, $mauthanhvien)
+	.title 
+		+section_title()
+	.home_member
+		padding: 0rem 1.5rem
+		margin: 3rem 0rem
+	figure 
+		img 
+			padding: 0rem 2rem
+			border-radius: 50%
+			width: 100%
+	.box_team_icon, a
+			display: flex
+			justify-content: center
+			align-items: center
+	.box_team_icon
+		margin-top: 1rem
+		a 	
+			margin: 0rem .4rem
+			width: 2.1rem
+			height: 2.1rem
+			border-radius: 50%
+			background: grey
+			flex-direction: row
+			i 
+				color: #fff
+
+.home_skill
+	+section_home($maunhat,$mauthanhvien)
+	.title 
+		+section_title()
+	div[id^="circle"]
+		position: relative
+		display: flex 
+		justify-content: center
+		align-items: center
+		canvas
+			transform: rotate(90deg)
+		p 
+			position: absolute
+			font-size: 2.4rem
+	h3 
+		padding: 1rem 0rem
+		font-weight: 600
+
+
+.home_portfolio
+	+section_home($mauskill,#333)
+	.title
+		+section_title()
+	.box-btn
+		list-style: none
+		display: flex
+		justify-content: center
+		padding: 0rem
+		li
+			margin: 0rem .2rem
+			a	
+				display: flex
+				justify-content: center
+				width: 60px
+				background: darken($mauskill, 20%)
+				border: none
+	.img_home_pro
+		figure
+			margin: 2rem 0rem
+			img 
+				width: 100%
+	.btn_more
+		+btn-to(#fff,$mauxanh, 1rem)
+
+
+.home_about
+	+section_home($mauhong,#fff)
+	.title 
+		+section_title()
+	.row_avatar
+		margin: 2rem 0rem
+	.about_avatar
+		figure
+			img
+				width: 100px
+				height: 100px
+				border-radius: 50%
+		.text 
+			text-align: left
+			p 
+				font-style: italic
+			h2 
+				font-size: 1.4rem 
+				font-weight: bold 
+				letter-spacing: .1rem
+				color: #fff
+				text-transform: uppercase
+			h6 
+				color: #fcd597
+
+.home_contact
+	+section_home($maucontact,#fff)
+	.title 
+		+section_title()
+	input, textarea
+		margin-top: 1rem
+		background: darken($maucontact,15%)
+		border: none
+		padding: 1.7rem 2rem
+		&:focus 
+			background: #273a71
+		&::placeholder
+			color: #fff
+			font-size: 1.1rem
+	.btn-more
+		+btn-to(#fff,$mauxanh, 1rem)
+
+
+footer
+	background: darken($maucontact,10%)
+	ul 
+		margin: 2rem 0rem
+		padding: 0px
+		display: flex
+		justify-content: center
+		list-style: none
+		li 
+			padding: 0.5rem 1rem
+			a 
+				color: white
+				font-size: 2rem
+				font-weight: 600
+	p 
+		text-align: center
+		font-size: 1.5rem
+
+//- reposive
+@media (max-width: 560px) 
+	header 
+		ul 
+			padding: 0px
+			a 
+				font-size: 1rem
+	.home_service
+		.box_icon
+			margin: 3rem 0rem
+	
+	.home_about 
+		.about_avatar
+			p,h2,h6
+				text-align: center
+	.home_contact 
+		form 
+			padding: 0rem
+	footer 
+		ul 	
+			padding: 0rem
+			display: flex
+			flex-direction: column
+			align-items: center
+	padding-bottom: 2rem
+	

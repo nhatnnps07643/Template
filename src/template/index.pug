@@ -1,0 +1,159 @@
+extends _layout/layout.pug
+block main 
+
+	//- Phần baner trang chủ
+	section.home_banner
+		.container 
+			.row
+				.col
+					h1 Hi Here! We are the new kids on the block and we build awesome websites and mobile  apps.
+					p
+						a.btn.btn-light.btn-more(href="#") WORK WITH US!
+						
+	//- Phần  section service
+	section.home_service 
+		.container 
+			.row.title
+				.col
+					h2 SERVICES WE PROVIDE
+					p 
+						|We are working with both individuals and businesses from all over the globe
+						br
+						| to create awesome websites and applications.
+			.row.mt-5.pl-md-3.pr-md-3.home_service_icon-
+				- for(var i = 1; i < 5; i++)
+					.col-md-3.box_icon
+						figure
+							a(href="#") 
+								img(src="img/home_icon_"+i+".png", alt="alt")
+							figcaption
+						h3 Branding
+						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+				
+	//- Viết home team 
+
+	//- Mixin thêm thành viên cho Team
+	mixin member(img,link,namelink,name,text)
+		figure
+			a(href="#") 
+				img(src='img/'+img, alt="").team_member
+			figcaption 
+		h4.pt-md-3.pb-md-3=name
+		a(href=link)=namelink
+		p=text
+		.box_team_icon
+			a(href="#").team_icon
+				i.fab.fa-facebook-f
+			a(href="#").team_icon
+				i.fab.fa-twitter
+			a(href="#").team_icon
+				i.fab.fa-linkedin-in
+			a(href="#").team_icon
+				i.fas.fa-envelope
+	//- kết thúc mixin
+	section.home_team
+		.container
+			.row.text-center.title
+				.col 
+					h2 MEET OUR BEAUTIFUL TEAM
+					p.pl-5.pr-5 We are a small team of designers and developers, who help brands with big ideas.
+			.row.member_team
+				.col-md-3.home_member
+					+member('home_member_1.png','#', 'CEO / Marketing Guru','ANNE HATHAWAY', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.')
+				.col-md-3.home_member
+					+member('home_member_1.png','#','Kate Upton','Creative Director','Duis aute irure dolor in in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat non diam proident.')
+				.col-md-3.home_member
+					+member('home_member_1.png','#','Olivia Wilde','Lead Designer','Nemo enim ipsam voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem nesciunt.')
+				.col-md-3.home_member
+					+member('home_member_1.png','#','Ashley Greene','SEO / Developer','Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.')
+
+	//- phần section skill
+	section.home_skill 
+		.container
+			.row.text-center.title
+				.col 
+					h2 WE GOT SKILLS!
+					p 
+						|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+						br
+						|tempor incididunt ut labore et dolore magna aliqua.
+			.row.mt-5
+				- var dem = 1
+				each val, name in {'Web Design':'90%','HTML / CSS':'75%','GRAPHIC DESIGN':'70%','UI / UX':'85%'}
+					.col-md-3 
+						div(id="circle"+dem+"")
+							p=val
+						h3=name
+					- dem++
+					
+	//- Phần Portfolio
+	section.home_portfolio
+		.container
+			.row.title
+				.col 
+					h2 OUR PORTFOLIO
+					p.pr-5.pl-5 Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam
+			.row
+				.col
+					ul.box-btn
+						-var mang = ['ALL','WEB','APP','ICONS']
+						- for(var i = 0; i < mang.length; i++)
+							li 
+								a(href="").btn.btn-light=mang[i]
+			.row.img_home_pro
+				each val, key in {'1':'Isometric Perspective Mock-Up','2':'Time Zone App UI','3':'Viro Media Players UI','4':'Blog / Magazine Flat UI Kit'}
+					.col-md-6
+						figure
+							img(src="img/home_pro_"+key+".png", alt="alt")
+							figcaption.mt-md-2=val
+			.row
+				.col-md-12
+					p
+						a.btn.btn-light.btn_more(href="#") LOAD MORE PROJECTS
+
+
+
+	//- phần  về chúng tôi 
+	section.home_about
+		.container 
+			.row.title
+				.col 
+					h2 WHAT PEOPLE SAY ABOUT US
+					p Our clients love us!
+			.row.about_avatar
+				- for(var i = 1 ; i < 5 ; i++ )
+					.col-md-6
+						.row.row_avatar
+							figure.col-md-3
+								img(src="img/home_member_1.png", alt="alt").class
+								figcaption 
+							.col-md-8.justify-mx-center.text 
+								p “Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Maecenas fringilla 	urna eu nisl scelerisque.”
+								h2 Chanel Iman
+								h6 CEO of Pinterest	
+	//- Phần liên hệ
+	section.home_contact
+		.container
+			.row.text-center.title
+				.col
+					h2 GET IN TOUCH
+					p 1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111
+			form
+				.row
+					.col-md-6
+						input.form-control(type='text', placeholder='First name')
+					.col-md-6
+						input.form-control(type='text', placeholder='Last name')
+					.col-12
+						textarea#exampleFormControlTextarea1.form-control(rows='7', placeholder="Your Message")
+			.row
+				.col-md-12.text-center
+					p.mt-2.mb-5
+						a.btn.btn-light.btn-more(href="#") SEND MESSAGE
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+@mixin btn-to($mauchu: #333, $maunen: #fff, $cachtop: 2rem)
+	font-size: 1rem
+	text-decoration: none
+	padding: 1rem 4rem
+	text-transform: uppercase
+	border: none
+	box-shadow: -1px 3px 0px darken( $maunen , 25%)
+	color: $mauchu
+	background: $maunen
+	margin-top: $cachtop
+
+@mixin section_home($maunen: #fff, $mauchu: #333)
+	background: $maunen
+	min-height: 368px
+	display: flex 
+	text-align: center
+	align-items: center
+	justify-content: center
+	color: $mauchu
+	padding: 4rem 0rem
+
+@mixin section_title()
+	h2 	
+		letter-spacing: .2rem
+		font-weight: 900
+		position: relative
+		margin-bottom: 1.7rem
+		&:before
+			content: ""
+			display: block
+			background: opacify(grey, 0.5)
+			width: 5rem 
+			height: 4px
+			position: absolute
+			left: 50%
+			bottom: -.7rem
+			transform: translateX(-50%)
